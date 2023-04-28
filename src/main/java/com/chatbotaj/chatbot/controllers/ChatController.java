@@ -13,10 +13,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class ChatController {
     @GetMapping(path = "/")
     public String all(@RequestParam(name = "", required = false) String chat) {
-        if (chat == null || chat == "" || Integer.parseInt(chat) > 3 || Integer.parseInt(chat) < 1) {
+        if (chat == null || chat.isEmpty()) {
             return "Press 1 : if you want to know your informations\nPress 2 : if youwant to know your product details\nPress 3 : if you want to know your product track status";
         } else {
-            return "inputed";
+            try {
+                int chatNumber = Integer.parseInt(chat);
+                if (chatNumber < 1 || chatNumber > 3) {
+                    return "Invalid input. Please enter a number between 1 and 3.";
+                } else {
+                    return "Input is valid: " + chat;
+                }
+            } catch (NumberFormatException e) {
+                return "Invalid input. Please enter a valid number between 1 and 3.";
+            }
         }
     }
+
 }
