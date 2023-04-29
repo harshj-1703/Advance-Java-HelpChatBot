@@ -5,15 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information Of Customer</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #ddd;
+        }
+        
+        .green {
+            color: green;
+        }
+        
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h2>Information Of Customer</h2>
-    <h4 th:text="${message}" th:if="${message}"></h4>
-    <h4 th:text="${customerid != null} ? 'Customer ID: ' + ${customerid} : ''"></h4>
-    <h4 th:text="${customername != null} ? 'Customer Name: ' + ${customername} : ''"></h4>
-    <h4 th:text="${customeraddress != null} ? 'Customer Address: ' + ${customeraddress} : ''"></h4>
-    <h4 th:text="${customerstatus != null && customerstatus == '1'} ? 'Customer Status: Active'" style="color: green;"></h4>
-    <h4 th:text="${customerstatus != null && customerstatus != '1'} ? 'Customer Status: InActive'" style="color: red;"></h4>
+    <h4 th:if="${message != null}" th:text="${message}"></h4>
+    <table>
+        <tr th:if="${customerid != null}">
+            <th>Customer ID:</th>
+            <td th:text="${customerid}"></td>
+        </tr>
+        <tr th:if="${customername != null}">
+            <th>Customer Name:</th>
+            <td th:text="${customername}"></td>
+        </tr>
+        <tr th:if="${customeraddress != null}">
+            <th>Customer Address:</th>
+            <td th:text="${customeraddress}"></td>
+        </tr>
+        <tr th:if="${customerstatus != null}">
+            <th>Customer Status:</th>
+            <td th:text="${customerstatus == '1'} ? 'Active' : 'Inactive'"
+                th:class="${customerstatus == '1'} ? 'green' : 'red'"></td>
+        </tr>
+    </table>
 
     <form action="information" method="post">
         <label for="info_number">Enter Customer Id : </label>
