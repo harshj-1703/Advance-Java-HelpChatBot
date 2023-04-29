@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Home</title>
+</head>
+<body>
+    <h2>Welcome to Help Chat For Online Shopping Center</h2>
+    <p>Press 1 : if you want to know your informations<br>
+        Press 2 : if you want to know your product details<br>
+        Press 3 : if you want to know your product track status</p>
+    <p th:text="${errorMessage}" th:if="${errorMessage}"></p>
+    <form action="ask" method="get">
+        <input type="text" name="input_number" required/>
+        <input type="submit" value="Ask">
+    </form>
+</body>
+</html>
