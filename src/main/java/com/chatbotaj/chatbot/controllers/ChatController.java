@@ -22,7 +22,7 @@ public class ChatController {
     public String ask(@RequestParam(name = "", required = true) String input_number,
             RedirectAttributes redirectAttributes) {
         if (input_number == null || input_number.isEmpty()) {
-            return "index";
+            return "redirect:/chat/";
         } else {
             try {
                 int chatNumber = Integer.parseInt(input_number);
@@ -31,7 +31,14 @@ public class ChatController {
                             "Invalid input. Please enter a number between 1 and 3.");
                     return "redirect:/chat/";
                 } else {
-                    return "welcome";
+                    if (chatNumber == 1) {
+                        return "informations";
+                    }
+                    if (chatNumber == 2) {
+                        return "productdetails";
+                    } else {
+                        return "producttrack";
+                    }
                 }
             } catch (NumberFormatException e) {
                 redirectAttributes.addFlashAttribute("errorMessage", "Invalid input. Please enter a valid number.");
