@@ -9,6 +9,7 @@
 <body>
     <h2>Information Of Customer</h2>
     <p th:text="${message}" th:if="${message}"></p>
+    <p th:text="${customername}" th:if="${customername}"></p>
     <form action="information" method="post">
         <label for="info_number">Enter Customer Id : </label>
         <input type="text" name="info_number" required/>

@@ -1,7 +1,5 @@
 package com.chatbotaj.chatbot.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,14 +25,14 @@ public class InfoController {
             RedirectAttributes redirectAttributes) {
         CustomerInformations customerInfo = customerInfoService.findByCustomerId(info_number);
         if (customerInfo == null) {
-            redirectAttributes.addAttribute("message",
+            redirectAttributes.addFlashAttribute("message",
                     "No Customer Found for Customer ID : " + info_number);
             System.out.println("No Customer Found for Customer ID : " + info_number);
         } else {
             System.out.println(customerInfo.getName());
-            redirectAttributes.addAttribute("customername", customerInfo.getName());
+            redirectAttributes.addFlashAttribute("customername", customerInfo.getName());
         }
-        return "informations";
+        return "redirect:/chat/ask?input_number=1";
     }
 
     @GetMapping(path = "/information")
