@@ -34,9 +34,4 @@ public class InfoController {
         }
         return "redirect:/chat/ask?input_number=1";
     }
-
-    @GetMapping(path = "/information")
-    public String getInfo(RedirectAttributes redirectAttributes) {
-        return "redirect:/chat/ask?input_number=1";
-    }
 }
