@@ -30,7 +30,10 @@ public class InfoController {
             System.out.println("No Customer Found for Customer ID : " + info_number);
         } else {
             System.out.println(customerInfo.getName());
+            redirectAttributes.addFlashAttribute("customerid", customerInfo.getCustomerId());
             redirectAttributes.addFlashAttribute("customername", customerInfo.getName());
+            redirectAttributes.addFlashAttribute("customeraddress", customerInfo.getAddress());
+            redirectAttributes.addFlashAttribute("customerstatus", customerInfo.getStatus());
         }
         return "redirect:/chat/ask?input_number=1";
     }

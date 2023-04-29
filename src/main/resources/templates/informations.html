@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Information Of Customer</title>
 </head>
 <body>
     <h2>Information Of Customer</h2>
-    <p th:text="${message}" th:if="${message}"></p>
-    <p th:text="${customername}" th:if="${customername}"></p>
+    <h4 th:text="${message}" th:if="${message}"></h4>
+    <h4 th:text="${customerid != null} ? 'Customer ID: ' + ${customerid} : ''"></h4>
+    <h4 th:text="${customername != null} ? 'Customer Name: ' + ${customername} : ''"></h4>
+    <h4 th:text="${customeraddress != null} ? 'Customer Address: ' + ${customeraddress} : ''"></h4>
+    <h4 th:text="${customerstatus != null && customerstatus == '1'} ? 'Customer Status: Active'" style="color: green;"></h4>
+    <h4 th:text="${customerstatus != null && customerstatus != '1'} ? 'Customer Status: InActive'" style="color: red;"></h4>
+
     <form action="information" method="post">
         <label for="info_number">Enter Customer Id : </label>
         <input type="text" name="info_number" required/>
