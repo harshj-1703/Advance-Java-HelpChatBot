@@ -1,0 +1,75 @@
+body{
+            
+    text-align: center;
+    background-size:cover;
+    animation:pan 6s infinite alternate linear;
+    background-image: url('./images/wp.jpg');
+    /* height:140vh; */
+    margin-top: 200px;
+}
+@keyframes pan{
+        100%{
+          background-position:100% 50%
+        }
+}
+h2{
+    text-align:center;
+}
+p{
+    font-weight:bold;
+}
+article{
+ opacity: 1;
+ margin:auto;
+ width: 40%;
+ padding: 16px;
+ box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+background-color:transparent;
+border:3px solid black;
+margin-top:40px;
+
+ 
+}
+h2{
+ opacity: 1;
+ margin:auto;
+ width: 40%;
+ padding: 16px;
+ box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+background-color:transparent;
+border:3px solid black;
+margin-top:-120px;
+
+ 
+}
+input{
+    border-radius: 10px;
+    width:50%;
+    height:7vh;
+    
+}
+.kashyap{
+    width:60px;
+    
+}
+label{
+    text-align: center;
+    font-weight: bold;
+}
+.btn:hover{
+         
+         background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+        
+         text-transform: uppercase;
+         background-size: 200% auto;
+         color: white;            
+         box-shadow: 0 0 20px #eee;
+         border-radius: 10px;
+         display: block;
+       }
+
+       .btn-grad:hover {
+         background-position: right center; /* change the direction of the change here */
+         color: #fff;
+         text-decoration: none;
+       }

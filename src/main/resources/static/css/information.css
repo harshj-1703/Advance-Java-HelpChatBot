@@ -1,0 +1,81 @@
+body{
+            
+    text-align: center;
+    background-size:cover;
+    animation:pan 6s infinite alternate linear;
+    background-image: url('./images/wp-4.jpg');
+    /* height:140vh; */
+    margin-top: 200px;
+}
+@keyframes pan{
+        100%{
+          background-position:100% 80%
+        }
+}
+
+table {
+ 
+    width: 50%;
+    margin-left:30%;
+  
+   
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-radius: 2px;
+    /* border: 1px solid #ddd; */
+    
+}
+
+th {
+    background-color: #ddd;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+
+}
+h2{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+body{
+    margin-top:100px;
+}
+.btn{
+    background-color:aquamarine;
+    border:2px solid black;
+}
+.btn:hover{
+         
+        background-image: linear-gradient(to right, lightgreen 0%, blue  51%, #E55D87  100%);
+        
+        text-transform: uppercase;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        
+     
+       }
+
+       .btn-grad:hover {
+         background-position: right center; /* change the direction of the change here */
+         color:lightcyan
+        
+        }
+        a:hover{
+            color: aquamarine;
+           background-color:aquamarine;
+           border: 2px solid black;
+        }
+        input{
+            font-weight: bold;
+        }
