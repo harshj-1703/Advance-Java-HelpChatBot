@@ -7,7 +7,81 @@
     <title>Product Track</title>
 </head>
 <body>
-    Product Track Status
+    <h2>Product Track Status</h2>
+    <h4 th:if="${message != null}" th:text="${message}"></h4>
+    <table>
+        <tr th:if="${trackid != null}">
+            <th>Track ID:</th>
+            <td th:text="${trackid}"></td>
+        </tr>
+        <tr th:if="${productid != null}">
+            <th>Product ID:</th>
+            <td th:text="${productid}"></td>
+        </tr>
+        <tr th:if="${productname != null}">
+            <th>Product Name:</th>
+            <td th:text="${productname}"></td>
+        </tr>
+        <tr th:if="${productdescription != null}">
+            <th>Product Description:</th>
+            <td th:text="${productdescription}"></td>
+        </tr>
+        <tr th:if="${customerid != null}">
+            <th>Customer ID:</th>
+            <td th:text="${customerid}"></td>
+        </tr>
+        <tr th:if="${customername != null}">
+            <th>Customer Name:</th>
+            <td th:text="${customername}"></td>
+        </tr>
+        <tr th:if="${customeraddress != null}">
+            <th>Customer Address:</th>
+            <td th:text="${customeraddress}"></td>
+        </tr>
+        <tr th:if="${totalquantity != null}">
+            <th>Product Quantity:</th>
+            <td th:text="${totalquantity}"></td>
+        </tr>
+        <tr th:if="${totalprice != null}">
+            <th>Product Price:</th>
+            <td th:text="${totalprice}"></td>
+        </tr>
+        <tr th:if="${totalprice != null}">
+            <th>Total Price:</th>
+            <td th:text="${totalprice*totalquantity}"></td>
+        </tr>
+        <tr th:if="${productfrom != null}">
+            <th>Product From:</th>
+            <td th:text="${productfrom}"></td>
+        </tr>
+        <tr th:if="${deliveryaddress != null}">
+            <th>Delivery Address:</th>
+            <td th:text="${deliveryaddress}"></td>
+        </tr>
+        <tr th:if="${productcurrentlocation != null}">
+            <th>Product Current Location:</th>
+            <td th:text="${productcurrentlocation}"></td>
+        </tr>
+        <tr th:if="${purchasedate != null}">
+            <th>Product Purchase Date:</th>
+            <td th:text="${purchasedate}"></td>
+        </tr>
+        <tr th:if="${deliveryestimateddate != null}">
+            <th>Product Delivery Estimated Date:</th>
+            <td th:text="${deliveryestimateddate}"></td>
+        </tr>
+        <tr th:if="${status != null}">
+            <th>Track Status:</th>
+            <td th:text="${status == '1'} ? 'On The Way' : 'Delivered'"
+                th:class="${status == '1'} ? 'green' : 'Red'"></td>
+        </tr>
+    </table>
+
+    <form action="trackinfo" method="post">
+        <label for="track_no">Enter Track Id : </label>
+        <input type="text" name="track_no" required/>
+        <input type="submit" value="Get Track Information">
+    </form>
     <a href="../">Home</a>
 </body>
 </html>

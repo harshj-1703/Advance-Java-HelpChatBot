@@ -28,8 +28,8 @@
         </tr>
         <tr th:if="${productstatus != null}">
             <th>Product Status:</th>
-            <td th:text="${productstatus == '1'} ? 'Active' : 'Sold'"
-                th:class="${productstatus == '1'} ? 'green' : 'Available'"></td>
+            <td th:text="${productstatus == '1'} ? 'Available' : 'Sold'"
+                th:class="${productstatus == '1'} ? 'green' : 'Red'"></td>
         </tr>
     </table>
 
