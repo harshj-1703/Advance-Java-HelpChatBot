@@ -7,7 +7,37 @@
     <title>Product Details</title>
 </head>
 <body>
-    Product Details
+    <h2>Product Details</h2>
+    <h4 th:if="${message != null}" th:text="${message}"></h4>
+    <table>
+        <tr th:if="${productid != null}">
+            <th>Product ID:</th>
+            <td th:text="${productid}"></td>
+        </tr>
+        <tr th:if="${productname != null}">
+            <th>Product Name:</th>
+            <td th:text="${productname}"></td>
+        </tr>
+        <tr th:if="${productprice != null}">
+            <th>Product Price:</th>
+            <td th:text="${productprice}"></td>
+        </tr>
+        <tr th:if="${productdescription != null}">
+            <th>Product Description:</th>
+            <td th:text="${productdescription}"></td>
+        </tr>
+        <tr th:if="${productstatus != null}">
+            <th>Product Status:</th>
+            <td th:text="${productstatus == '1'} ? 'Active' : 'Sold'"
+                th:class="${productstatus == '1'} ? 'green' : 'Available'"></td>
+        </tr>
+    </table>
+
+    <form action="productinfo" method="post">
+        <label for="product_no">Enter Product Id : </label>
+        <input type="text" name="product_no" required/>
+        <input type="submit" value="Get Product Information">
+    </form>
     <a href="../">Home</a>
 </body>
 </html>
