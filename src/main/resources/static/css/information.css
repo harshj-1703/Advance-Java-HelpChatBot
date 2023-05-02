@@ -3,7 +3,7 @@ body{
     text-align: center;
     background-size:cover;
     animation:pan 6s infinite alternate linear;
-    background-image: url('./images/wp-4.jpg');
+    background-image: url('../images/wp-4.jpg');
     /* height:140vh; */
     margin-top: 200px;
 }
