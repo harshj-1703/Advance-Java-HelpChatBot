@@ -1,5 +1,6 @@
 package com.chatbotaj.chatbot.models;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -113,5 +114,17 @@ public class TrackInformations {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    // Method to get purchase date in "dd/MM/yyyy HH:mm:ss" format
+    public String getFormattedPurchaseDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return dateFormat.format(this.purchaseDate);
+    }
+
+    // Method to get delivery estimated date in "dd/MM/yyyy HH:mm:ss" format
+    public String getFormattedDeliveryEstimatedDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return dateFormat.format(this.deliveryEstimatedDate);
     }
 }
