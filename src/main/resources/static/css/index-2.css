@@ -70,7 +70,9 @@ th, td {
     border-radius: 2px;
     /* border: 1px solid #ddd; */
 }
-
+h4{
+    color: white;
+}
 td{
     color: white;
 }
