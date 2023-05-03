@@ -1,0 +1,118 @@
+body{
+            
+    text-align: center;
+    background-size:cover;
+    animation:pan 6s infinite alternate linear;
+    background-image: url('../images/wp-6.jpg');
+    /* height:140vh;  */
+    margin-top: 200px;
+}
+@keyframes pan{
+        100%{
+          background-position:100% 90%
+        }
+}
+h2{
+    text-align:center;
+}
+p{
+    font-weight:bold;
+}
+article{
+opacity: 1;
+margin:auto;
+width: 40%;
+padding: 16px;
+box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+background-color:transparent;
+border:3px solid black;
+margin-top:40px;
+
+ 
+}
+h2{
+opacity: 1;
+margin:auto;
+width: 44%;
+padding: 6px;
+box-shadow: 10px 10px 10px 0px rgba(243, 235, 235, 0.7);
+background-color:transparent;
+border:2px solid rgb(246, 232, 232);
+margin-top:-110px;
+color:white;
+margin-left: 65vh;
+
+ 
+}
+label{
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+input{
+    font-weight: bold;
+    border: 2px solid white; 
+    padding: 5px;
+    border:2px solid gray;
+}
+
+table {
+ 
+    width: 50%;
+    margin-left:30%;
+  
+   
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-radius: 2px;
+    /* border: 1px solid #ddd; */
+}
+
+td{
+    color: white;
+}
+
+th {
+    background-color: #ddd;
+}
+.btn{
+    padding: 7px;
+    border-radius: 30px;
+    font-weight: bold;
+    background-color: #5dd7e5;
+    margin-left: 110px;
+    border: 2px solid gray;
+}
+a{
+    text-decoration: none;
+    margin-left: 110px;
+    color:#fff;
+}
+a:hover{
+    color: yellow;
+    font-weight: bold;
+    box-sizing: border-box;
+    
+    
+    
+}
+.btn:hover{
+         
+         background-image: linear-gradient(to right, #5dd7e5 0%, #6e61c2  51%, #e55d8a  100%);
+        
+         text-transform: uppercase;
+         background-size: 200% auto;
+         color: white;            
+         box-shadow: 0 0 20px #eee;
+         border-radius:30px;
+        
+       }
+
+       .btn-grad:hover {
+         background-position: right center; /* change the direction of the change here */
+         color: #fff;
+         text-decoration: none;
+       }
